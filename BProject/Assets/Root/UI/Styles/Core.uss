@@ -1,0 +1,24 @@
+.button {
+    margin-bottom: 32px;
+    margin-top: 32px;
+    height: 100px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background-color: rgba(208, 204, 253, 0.47);
+    border-top-width: 3px;
+    border-right-width: 3px;
+    border-bottom-width: 3px;
+    border-left-width: 3px;
+    border-left-color: rgb(178, 181, 241);
+    border-right-color: rgb(178, 181, 241);
+    border-top-color: rgb(178, 181, 241);
+    border-bottom-color: rgb(178, 181, 241);
+    -unity-font-definition: url("project://database/Assets/Root/Graphics/Fonts/Nunito.ttf?fileID=12800000&guid=3231ca4111094144398993d361a16680&type=3#Nunito");
+    color: rgb(255, 255, 255);
+    font-size: 32px;
+    -unity-font-style: bold;
+    width: 80%;
+    align-self: center;
+}
