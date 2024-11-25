@@ -1,24 +1,79 @@
 .button {
-    margin-bottom: 32px;
-    margin-top: 32px;
-    height: 100px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
-    background-color: rgba(208, 204, 253, 0.47);
-    border-top-width: 3px;
-    border-right-width: 3px;
-    border-bottom-width: 3px;
-    border-left-width: 3px;
-    border-left-color: rgb(178, 181, 241);
-    border-right-color: rgb(178, 181, 241);
-    border-top-color: rgb(178, 181, 241);
-    border-bottom-color: rgb(178, 181, 241);
+    background-image: url("project://database/Assets/Root/Graphics/Sprites/Gradients/gradient_0.png?fileID=21300000&guid=30ae47e557f14504a830258023db0229&type=3#gradient_0");
+    -unity-background-scale-mode: scale-and-crop;
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.31);
+    background-color: rgba(0, 0, 0, 0);
     -unity-font-definition: url("project://database/Assets/Root/Graphics/Fonts/Nunito.ttf?fileID=12800000&guid=3231ca4111094144398993d361a16680&type=3#Nunito");
+    -unity-font-style: bold;
     color: rgb(255, 255, 255);
     font-size: 32px;
-    -unity-font-style: bold;
-    width: 80%;
-    align-self: center;
+    border-top-width: 4px;
+    border-right-width: 4px;
+    border-bottom-width: 4px;
+    border-left-width: 4px;
+    border-left-color: rgba(255, 255, 255, 0.39);
+    border-right-color: rgba(255, 255, 255, 0.39);
+    border-top-color: rgba(255, 255, 255, 0.39);
+    border-bottom-color: rgba(255, 255, 255, 0.39);
+    transition-duration: 0.25s;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+.button:hover {
+    background-image: url("project://database/Assets/Root/Graphics/Sprites/Gradients/gradient_0.png?fileID=21300000&guid=30ae47e557f14504a830258023db0229&type=3#gradient_0");
+    -unity-background-scale-mode: scale-and-crop;
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.47);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.button:active {
+    background-image: url("project://database/Assets/Root/Graphics/Sprites/Gradients/gradient_0.png?fileID=21300000&guid=30ae47e557f14504a830258023db0229&type=3#gradient_0");
+    -unity-background-scale-mode: scale-and-crop;
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.71);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.button.toggle {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 64px;
+    height: 64px;
+}
+
+.sounds-on {
+    background-image: url("project://database/Assets/Root/Graphics/Textures/volume.png?fileID=2800000&guid=78b75a116976b3c49b540a261ff1bc56&type=3#volume");
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.sounds-off {
+    background-image: url("project://database/Assets/Root/Graphics/Textures/volume-mute.png?fileID=2800000&guid=749bcca1f832c3845ab6107e05057a89&type=3#volume-mute");
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.item-done {
+}
+
+.item-open {
+}
+
+.item-unknown {
+}
+
+.item {
+    background-color: rgba(255, 23, 144, 0.61);
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    flex-grow: 1;
+    display: flex;
+    width: 960px;
+    height: 1080px;
 }

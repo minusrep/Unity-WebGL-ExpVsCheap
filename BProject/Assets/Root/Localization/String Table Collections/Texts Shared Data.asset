@@ -23,6 +23,14 @@ MonoBehaviour:
     m_Key: LoadingScreen
     m_Metadata:
       m_Items: []
+  - m_Id: 29610723771408384
+    m_Key: UIStartWindow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29611200022044672
+    m_Key: UIStartWindow 1
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

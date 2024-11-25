@@ -1,3 +1,4 @@
+using System.Collections;
 using Root.Services;
 using Root.UI;
 
@@ -7,11 +8,13 @@ namespace Root.Sessions
     {
         protected override SceneType Scene => SceneType.Loading;
 
-        protected override void Init()
+        protected override IEnumerator Init()
         {
             var loadingGUI = new LoadingGUI();
 
             RegisterController<LoadingGUI>(loadingGUI);
+
+            yield return null;
         }
     }
 }

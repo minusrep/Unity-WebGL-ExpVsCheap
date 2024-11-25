@@ -6,7 +6,7 @@ using Root.Tools;
 
 namespace Root.UI
 {
-    public abstract class UIWindowHandler : IWindowManipulator, IServiceUser
+    public class UIWindowHandler : IWindowManipulator, IServiceUser
     {
         protected ILocator<IService> _services;
 
@@ -24,7 +24,7 @@ namespace Root.UI
         public virtual void Init(ILocator<IService> serviceLocator) 
             => _services = serviceLocator;
 
-        public void OpenWindow<T>() where T : UIWindow
+        public void Open<T>() where T : UIWindow
         {
             Clear();
 
@@ -39,6 +39,24 @@ namespace Root.UI
             _actual.Show();
         }
 
+        public T Get<T>() where T : UIWindow
+        {
+            var founded = _windows.First(a => a is T);
+
+            if (founded == null) throw new KeyNotFoundException($"{typeof(T)} not found");
+
+            return founded as T;
+        }
+
+        public void Add<T>() where T : UIWindow, new()
+        {
+            var window = new T();
+
+            window.Init(_services);
+
+            _windows.Add(window);
+        }
+        
         public void PreviousWindow()
         {
             Clear();
@@ -57,13 +75,6 @@ namespace Root.UI
         protected void Clear()
             => _windows.ForEach(a => a.Hide());
 
-        protected void AddWindow<T>() where T : UIWindow, new()
-        {
-            var window = new T();
 
-            window.Init(_services, this);
-
-            _windows.Add(window);
-        }
     }
 }

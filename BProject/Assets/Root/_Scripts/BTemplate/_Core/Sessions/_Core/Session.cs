@@ -18,6 +18,8 @@ namespace Root.Sessions
         
         private static bool IsInitialized => _services != null;
         
+        protected bool IsLoaded => _sceneLoader.IsSceneLoaded(Scene);
+
         protected abstract SceneType Scene { get;  }
         
         private Locator<IController> _controllers;
@@ -27,7 +29,7 @@ namespace Root.Sessions
             _services = services;
             
             _sceneLoader = _services.Get<ISceneLoader>();
-
+            
             OnSessionChangeEvent += (session) => session.Init();
         }
         
@@ -35,16 +37,14 @@ namespace Root.Sessions
         {
             yield return _sceneLoader.LoadSceneAsync(_defaultScene);
         }
-        
+
         private IEnumerator Start()
         {
             if (IsInitialized)
-                OnSessionChangeEvent?.Invoke(this);
-            
-            yield return null;
+                yield return Init();
         }
 
-        protected abstract void Init();
+        protected abstract IEnumerator Init();
 
         protected void RegisterController<T>(T controller) where T : IController
         {

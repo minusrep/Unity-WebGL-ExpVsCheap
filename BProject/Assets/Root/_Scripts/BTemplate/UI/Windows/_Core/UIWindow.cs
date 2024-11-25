@@ -13,18 +13,14 @@ namespace Root.UI
 
         protected UIDocument _document;
 
-        protected IWindowManipulator _manipulator;
-
         protected ICreator _creator;
         
         protected IAssetsProvider _assetsProvider;
 
         protected VisualElement _content;
         
-        public virtual void Init(ILocator<IService> services, IWindowManipulator manipulator)
+        public virtual void Init(ILocator<IService> services)
         {
-            _manipulator = manipulator;
-
             _creator = services.Get<ICreator>();
             
             _assetsProvider = services.Get<IAssetsProvider>();
@@ -51,7 +47,7 @@ namespace Root.UI
         {
             _content.transform.scale = UIConstants.WindowAppearFrom * Vector3.one;
 
-            IsActive = true;
+            Active = true;
 
             var appearTween = DOTween.To(() => _content.transform.scale,
                                     x => _content.transform.scale = x,

@@ -4,7 +4,7 @@
     {
         #region SceneLoader
 
-        public const float LoadingDelay = 4f;
+        public const float LoadingDelay = 1f;
 
         #endregion
 

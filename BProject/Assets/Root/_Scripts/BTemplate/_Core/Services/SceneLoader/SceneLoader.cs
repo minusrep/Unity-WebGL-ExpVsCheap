@@ -13,7 +13,10 @@ namespace Root.Services
         public event Action<float> OnLoadingEvent;
 
         public event Action OnLoadedEvent;
-        
+
+        public bool IsSceneLoaded(SceneType scene) 
+            => SceneManager.GetActiveScene().buildIndex == (int) scene;
+
         public IEnumerator LoadSceneAsync(SceneType scene, bool delay = true, Action callback = null)
         {
             SceneManager.LoadScene((int) SceneType.Loading);
@@ -25,9 +28,13 @@ namespace Root.Services
             yield return LoadingRoutine(operation, delay);
 
             SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(index));
+            
+            Debug.Log(SceneManager.GetActiveScene().name);
+            
+            var unloadOperation = SceneManager.UnloadSceneAsync((int) SceneType.Loading);
 
-            SceneManager.UnloadSceneAsync((int) SceneType.Loading);
-
+            yield return new WaitUntil(() => !unloadOperation.isDone);
+            
             callback?.Invoke();
         }
 
@@ -54,5 +61,6 @@ namespace Root.Services
             
             OnLoadedEvent?.Invoke();
         }
+        
     }
 }

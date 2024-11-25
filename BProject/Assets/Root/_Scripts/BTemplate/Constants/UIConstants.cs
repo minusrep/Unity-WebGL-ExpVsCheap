@@ -5,6 +5,22 @@
         public const string ProgressBar = "progress-bar";
 
         public const string Content = "content";
+        
+        public const string Title = "title";
+
+        public const string Controls = "controls";
+        
+        public const string Price = "price";
+        
+        public const string Icon = "icon";
+        
+        public const string StartButton = "start-button";
+        
+        public const string GreaterButton = "greater-button";
+
+        public const string InteractablePanel = "interactable-panel";
+        
+        public const string LessButton = "less-button";
 
         public const float WindowAppearTime = 0.1f;
 

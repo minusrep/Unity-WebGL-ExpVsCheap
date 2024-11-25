@@ -13,9 +13,9 @@ namespace Root.UI
 
         private ISceneLoader _sceneLoader;
     
-        public override void Init(ILocator<IService> services, IWindowManipulator manipulator = null)
+        public override void Init(ILocator<IService> services)
         {
-            base.Init(services, manipulator);
+            base.Init(services);
 
             _sceneLoader = services.Get<ISceneLoader>();
 

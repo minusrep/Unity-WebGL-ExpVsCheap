@@ -4,11 +4,14 @@ namespace Root.UI
 {
     public class UIElement<T> where T : VisualElement
     {
-        public bool IsActive 
+        public bool Active 
         {
             get => _root.style.display == DisplayStyle.Flex;
 
-            protected set => _root.style.display = value ? DisplayStyle.Flex : DisplayStyle.None;
+            set
+            {
+                _root.style.display = value ? DisplayStyle.Flex : DisplayStyle.None;
+            }
         }
 
         protected T _root;
@@ -18,19 +21,19 @@ namespace Root.UI
 
         }
 
-        public UIElement(T root)
+        public UIElement(T root = null)
         {
             _root = root;
         }
         
         public virtual void Show()
         {
-            IsActive = true;
+            Active = true;
         }
 
         public virtual void Hide()
         {
-            IsActive = false;
+            Active = false;
         }
     }
 }

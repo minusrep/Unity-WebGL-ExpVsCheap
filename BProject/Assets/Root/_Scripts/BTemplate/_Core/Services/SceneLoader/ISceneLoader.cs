@@ -11,6 +11,8 @@ namespace Root.Services
 
         event Action OnLoadedEvent;
 
+        bool IsSceneLoaded(SceneType scene);
+
         IEnumerator LoadSceneAsync(SceneType scene, bool delay = true, Action callback = null);
     }
 }

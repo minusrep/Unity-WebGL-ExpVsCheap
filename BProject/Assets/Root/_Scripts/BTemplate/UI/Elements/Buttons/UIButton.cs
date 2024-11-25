@@ -9,7 +9,7 @@ namespace Root.UI
 
         public UIButton(Button root) : base(root) 
         {
-            root.clicked += OnClick;
+            root.clicked += () => OnClick?.Invoke();
         }
     }
 }

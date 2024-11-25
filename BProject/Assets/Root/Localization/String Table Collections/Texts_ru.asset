@@ -26,6 +26,14 @@ MonoBehaviour:
     m_Localized: GUID:eeb42ba716a9f2d49ae53d12bf1d5fc1
     m_Metadata:
       m_Items: []
+  - m_Id: 29610723771408384
+    m_Localized: GUID:eeb42ba716a9f2d49ae53d12bf1d5fc1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29611200022044672
+    m_Localized: GUID:eeb42ba716a9f2d49ae53d12bf1d5fc1
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
