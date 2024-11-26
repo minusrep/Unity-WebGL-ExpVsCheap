@@ -3,23 +3,23 @@ using UnityEngine;
 
 namespace Root
 {
-    [Serializable]
-    public class ItemConfig
+    [CreateAssetMenu(fileName = "itemConfig", menuName = "Configs/Item Config", order = 1)]
+    public class ItemConfig : ScriptableObject
     {
         public string Name => _name;
         
         public float Price => _price;
         
         public Sprite Icon => _icon;
-        
-        public ItemState State => _state;
+
+        public int ID => _id;
         
         [SerializeField] private string _name;
 
         [SerializeField] private float _price;
 
         [SerializeField] private Sprite _icon;
-        
-        [SerializeField] private ItemState _state;
+
+        [SerializeField] private int _id;
     }
 }

@@ -1,29 +1,17 @@
 .button {
+    background-image: url("project://database/Assets/Root/Graphics/Sprites/Gradients/gradient_0.png?fileID=21300000&guid=30ae47e557f14504a830258023db0229&type=3#gradient_0");
+    -unity-background-scale-mode: scale-and-crop;
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.18);
+    background-color: rgba(0, 0, 0, 0);
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
-    background-image: url("project://database/Assets/Root/Graphics/Sprites/Gradients/gradient_0.png?fileID=21300000&guid=30ae47e557f14504a830258023db0229&type=3#gradient_0");
-    -unity-background-scale-mode: scale-and-crop;
-    -unity-background-image-tint-color: rgba(255, 255, 255, 0.31);
-    background-color: rgba(0, 0, 0, 0);
+    height: 80px;
     -unity-font-definition: url("project://database/Assets/Root/Graphics/Fonts/Nunito.ttf?fileID=12800000&guid=3231ca4111094144398993d361a16680&type=3#Nunito");
-    -unity-font-style: bold;
     color: rgb(255, 255, 255);
-    font-size: 32px;
-    border-top-width: 4px;
-    border-right-width: 4px;
-    border-bottom-width: 4px;
-    border-left-width: 4px;
-    border-left-color: rgba(255, 255, 255, 0.39);
-    border-right-color: rgba(255, 255, 255, 0.39);
-    border-top-color: rgba(255, 255, 255, 0.39);
-    border-bottom-color: rgba(255, 255, 255, 0.39);
-    transition-duration: 0.25s;
-    margin-top: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-    margin-left: 0;
+    font-size: 39px;
+    -unity-font-style: bold;
 }
 
 .button:hover {
@@ -31,6 +19,8 @@
     -unity-background-scale-mode: scale-and-crop;
     -unity-background-image-tint-color: rgba(255, 255, 255, 0.47);
     background-color: rgba(0, 0, 0, 0);
+    scale: 1.025 1.025;
+    transition-duration: 0.2s;
 }
 
 .button:active {
@@ -58,15 +48,6 @@
     -unity-background-scale-mode: scale-to-fit;
 }
 
-.item-done {
-}
-
-.item-open {
-}
-
-.item-unknown {
-}
-
 .item {
     background-color: rgba(255, 23, 144, 0.61);
     align-items: center;
@@ -76,4 +57,168 @@
     display: flex;
     width: 960px;
     height: 1080px;
+}
+
+.main-icon {
+    flex-grow: 0;
+    width: 560px;
+    height: 560px;
+    background-image: url("project://database/Assets/Root/Graphics/Sprites/Icons/Objects/lambo.png?fileID=2800000&guid=c1885af1668eb7d4892f965b01da345a&type=3#lambo");
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.main-icon:hover {
+    flex-grow: 0;
+    width: 560px;
+    height: 560px;
+    background-image: url("project://database/Assets/Root/Graphics/Sprites/Icons/Objects/lambo.png?fileID=2800000&guid=c1885af1668eb7d4892f965b01da345a&type=3#lambo");
+    -unity-background-scale-mode: scale-to-fit;
+    scale: 1.05 1.05;
+    transition-duration: 0.4s;
+}
+
+.title {
+    -unity-font-definition: url("project://database/Assets/Plugins/TextMesh%20Pro/Fonts/LiberationSans.ttf?fileID=12800000&guid=e3265ab4bf004d28a9537516768c1c75&type=3#LiberationSans");
+    color: rgb(255, 255, 255);
+    -unity-font-style: bold;
+    font-size: 84px;
+    transition-duration: 0s;
+}
+
+.title:hover {
+    -unity-font-definition: url("project://database/Assets/Plugins/TextMesh%20Pro/Fonts/LiberationSans.ttf?fileID=12800000&guid=e3265ab4bf004d28a9537516768c1c75&type=3#LiberationSans");
+    color: rgb(255, 255, 255);
+    -unity-font-style: bold;
+    font-size: 84px;
+    scale: 1.025 1.025;
+}
+
+.controls {
+    flex-grow: 0;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+    border-bottom-right-radius: 32px;
+    border-bottom-left-radius: 32px;
+    overflow: hidden;
+    display: flex;
+    width: 320px;
+    align-self: center;
+    height: 80px;
+    transition-duration: 0s;
+}
+
+.controls:hover {
+    flex-grow: 0;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+    border-bottom-right-radius: 32px;
+    border-bottom-left-radius: 32px;
+    overflow: hidden;
+    display: flex;
+    width: 320px;
+    align-self: center;
+    height: 80px;
+    scale: 1.05 1.05;
+    transition-duration: 0.1s;
+}
+
+.compare-button:hover {
+    flex-grow: 1;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    scale: 1.05 1.05;
+}
+
+.compare-button:active {
+    flex-grow: 1;
+    background-color: rgba(0, 0, 0, 0.31);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    scale: 1 1;
+}
+
+.compare-button {
+    flex-grow: 1;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+.info-panel {
+    flex-grow: 0;
+    background-image: url("project://database/Assets/Root/Graphics/Sprites/Gradients/gradient_0.png?fileID=21300000&guid=30ae47e557f14504a830258023db0229&type=3#gradient_0");
+    height: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    -unity-background-image-tint-color: rgba(136, 255, 253, 0.16);
+    border-left-color: rgba(145, 231, 230, 0.31);
+    border-right-color: rgba(145, 231, 230, 0.31);
+    border-top-color: rgba(145, 231, 230, 0.31);
+    border-bottom-color: rgba(145, 231, 230, 0.31);
+    border-top-width: 4px;
+    border-right-width: 4px;
+    border-bottom-width: 4px;
+    border-left-width: 4px;
+    margin-bottom: 32px;
+    transition-duration: 0.2s;
+}
+
+.info-panel:hover {
+    flex-grow: 0;
+    background-image: url("project://database/Assets/Root/Graphics/Sprites/Gradients/gradient_0.png?fileID=21300000&guid=30ae47e557f14504a830258023db0229&type=3#gradient_0");
+    height: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    -unity-background-image-tint-color: rgba(136, 255, 253, 0.16);
+    border-left-color: rgba(145, 231, 230, 0.31);
+    border-right-color: rgba(145, 231, 230, 0.31);
+    border-top-color: rgba(145, 231, 230, 0.31);
+    border-bottom-color: rgba(145, 231, 230, 0.31);
+    border-top-width: 4px;
+    border-right-width: 4px;
+    border-bottom-width: 4px;
+    border-left-width: 4px;
+    margin-bottom: 32px;
+    scale: 1.025 1.025;
 }

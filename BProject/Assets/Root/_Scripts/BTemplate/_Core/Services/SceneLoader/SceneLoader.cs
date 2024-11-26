@@ -29,8 +29,6 @@ namespace Root.Services
 
             SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(index));
             
-            Debug.Log(SceneManager.GetActiveScene().name);
-            
             var unloadOperation = SceneManager.UnloadSceneAsync((int) SceneType.Loading);
 
             yield return new WaitUntil(() => !unloadOperation.isDone);

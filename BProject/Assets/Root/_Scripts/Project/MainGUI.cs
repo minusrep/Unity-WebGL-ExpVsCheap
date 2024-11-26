@@ -14,8 +14,13 @@ namespace Root.UI
             InitWindowHandler(services);
 
             ApplySubscribtions();
+            
+            Begin();
         }
 
+        private void Begin()
+            => _windowHandler.Get<UIGameWindow>().Begin();
+        
         private void InitWindowHandler(ILocator<IService> services)
         {
             _windowHandler = new UIWindowHandler();
@@ -24,7 +29,7 @@ namespace Root.UI
 
             _windowHandler.Add<UIStartWindow>();
             
-            _windowHandler.Add<UIMainWindow>();
+            _windowHandler.Add<UIGameWindow>();
 
             _windowHandler.Add<UIOverlayWindow>();
 
@@ -35,7 +40,7 @@ namespace Root.UI
         {
             var startWindow = _windowHandler.Get<UIStartWindow>();
             
-            startWindow.StartButton.OnClick += () => _windowHandler.Open<UIMainWindow>();
+            startWindow.StartButton.OnClick += () => _windowHandler.Open<UIGameWindow>();
         }
     }
 }

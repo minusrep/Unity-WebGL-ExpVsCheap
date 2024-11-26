@@ -6,10 +6,12 @@ namespace Root.Constants
     {
         public const string UIWindowsPath = "Prefabs/UI/Windows/";
 
-        public const string ItemsetPath = "Configs/Itemset";
+        public const string ItemConfigs = "Configs/Items";
+
+        public const string ItemBackgroundColors = "Configs/ItemBackgroundColors";
 
         public const string ItemPrefabPath = "Prefabs/UI/Item";
         
-        public static string SavePath = Application.streamingAssetsPath + "/save.json";
+        public static readonly string SavePath = Application.streamingAssetsPath + "/save.json";
     }
 }

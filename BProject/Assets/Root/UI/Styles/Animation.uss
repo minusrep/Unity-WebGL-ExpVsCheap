@@ -1,0 +1,11 @@
+.item-default {
+    width: 960px;
+    height: 1080px;
+    transition: width 1s, height 1s;
+}
+
+.item-empty {
+    width: 0;
+    height: 1080px;
+    transition: width 1s, height 1s;
+}

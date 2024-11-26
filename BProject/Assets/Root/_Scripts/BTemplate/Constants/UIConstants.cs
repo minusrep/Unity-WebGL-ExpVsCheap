@@ -12,7 +12,7 @@
         
         public const string Price = "price";
         
-        public const string Icon = "icon";
+        public const string MainIcon = "main-icon";
         
         public const string StartButton = "start-button";
         
@@ -25,5 +25,9 @@
         public const float WindowAppearTime = 0.1f;
 
         public const float WindowAppearFrom = 1.025f;
+        
+        public const string StyleItemEmpty = "item-empty";
+        
+        public const string StyleItemDefault = "item-default";
     }
 }
